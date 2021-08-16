@@ -8,11 +8,12 @@
 				mySwiper = new Swiper(slider, {
 					slidesPerView: 'auto',
                     spaceBetween: 20,
-					speed: 600,
-					// pagination: {
-					//     el: slider.querySelector('.swiper-pagination'),
-					//     clickable: true,
-					// },
+					speed: 5000,
+					loop: true,
+					autoplay: {
+						delay: 1,
+						disableOnInteraction: false,
+					},
                     freeMode: true,
 				});
 

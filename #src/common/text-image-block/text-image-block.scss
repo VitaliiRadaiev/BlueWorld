@@ -1,9 +1,11 @@
 .text-image-block {
-    margin-bottom: 295px;
-
-    @include mb();
-
+    margin-bottom: 31px;
     position: relative;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 0;
+    }
+
 
     & .bubbles {
         position: absolute;
@@ -42,6 +44,7 @@
                     &:nth-child(2) {
                         left: auto;
                         right: -134px;
+                        transform: rotate(2deg);
 
                         @media (max-width: 1770px) {
                             right: 0;
