@@ -1,0 +1,238 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all .3s ease;
+
+    &.is-scroll {
+        background-color: #fff;
+
+        & .header__logo {
+            max-width: 212px;
+
+            @media (max-width: 575.98px) {
+                max-width: 160px;
+             }
+        }
+        & .nav-link {
+            &:not(.active) {
+                color: $textColor;
+            }
+        }
+
+        & .btn.btn-light {
+            background: $gradient;
+            color: $textColorLight;
+
+
+            @media (min-width: 992px) {
+                &:hover {
+                    box-shadow: 0 0 20px rgba($textColor, 0.73);
+                }
+            }
+        }
+
+        & .header__body {
+            min-height: 100px;
+
+            @media (max-width: 575.98px) {
+                min-height: 75px;
+            }
+        }
+    }
+
+    &:not(.is-scroll):not(.menu-is-open) {
+        & .header__logo {
+            & svg {
+                & path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &.menu-is-open {
+        background-color: #fff;
+
+        & .nav-link {
+            &:not(.active) {
+                color: $textColor;
+            }
+        }
+
+        & .btn.btn-light {
+            background: $gradient;
+            color: $textColorLight;
+
+
+            @media (min-width: 992px) {
+                &:hover {
+                    box-shadow: 0 0 20px rgba($textColor, 0.73);
+                }
+            }
+        }
+    }
+
+    & .btn {
+        @media (max-width: $md2+px) {
+            margin-left: auto;
+        }
+    }
+
+    & .navbar-toggler {
+        color: $textColor;
+        font-size: 36px;
+        margin-left: 40px;
+
+        @media (max-width: 575.98px) {
+            margin-left: 20px;
+        }
+    }
+
+    &__body {
+        min-height: 130px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: all .3s ease;
+        flex-wrap: nowrap !important;
+
+        @media (max-width: $md2+px) {
+            min-height: 110px;
+        }
+        @media (max-width: 575.98px) {
+            min-height: 90px;
+        }
+    }
+
+    &__menu {
+        margin-right: 39px;
+        flex: 0 0 auto;
+        margin-left: auto;
+
+        @media (max-width: $md1+px) {
+            margin-right: 25px;
+        }
+
+        @media (max-width: $md2+px) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 30px 15px;
+            background-color: #fff;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            display: block !important;
+        }
+
+        & .navbar-nav {
+            margin-left: auto;
+
+            @media (max-width: $md2+px) {
+                display: block;
+            }
+
+            & > li {
+                &:not(:last-child) {
+                    margin-right: 37px;
+
+                    @media (max-width: $md1+px) {
+                        margin-right: 25px;
+                    }
+
+                    @media (max-width: $md2+px) {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        & .nav-link {
+            color: $textColorLight;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 1.8px;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            padding: 0 !important;
+
+            @media (max-width: $md1+px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: $md2+px) {
+                font-size: 20px;
+                color: $textColor;
+            }
+
+            @media (min-width: 992px) {
+                &:hover:not(.active) {
+                    color: $mainColor;
+                }
+            }
+
+            &.active {
+                color: $mainColor2;
+            }
+
+            &.dropdown-toggle {
+                &:after {
+                    font-family: $fontAwesome;
+                    font-weight: 900;
+                    content: "\f078";
+                    border: none;
+                    vertical-align: 0;
+                }
+            }
+        }
+
+        & .dropdown-menu {
+            min-width: 5rem;
+            position: absolute;
+        }
+
+        & .dropdown-item {
+            color: $textColor;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 1.8px;
+            line-height: 1.2em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 307px;
+        transform: translateX(14px);
+        transition: all .3s ease;
+        margin-right: 30px;
+
+        @media (max-width: $md2+px) {
+            max-width: 212px;
+            transform: translateX(0px);
+        }
+
+        @media (max-width: 575.98px) {
+           max-width: 160px;
+        }
+
+        & svg {
+            width: 100%;
+            height: auto;
+
+            & path {
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+

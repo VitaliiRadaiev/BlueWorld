@@ -1,0 +1,215 @@
+.promo-header {
+    position: relative;
+    margin-bottom: 300px;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 150px;
+    }
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 80px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: $gradient;
+    }
+
+    &__body {
+        min-height: 100vh;
+        color: $textColorLight;
+        padding-bottom: 210px;
+        padding-top: 140px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 1300px) {
+            display: block !important;
+            padding-top: 200px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-top: 145px; 
+        }
+
+        & .promo-preview-products {
+            position: absolute;
+            top: max(120px, 25vh);
+            right: 15px;
+
+            @media (max-width: 1300px) {
+                position: relative;
+                margin: 0 auto;
+                top: 0;
+                right: 0;
+            }
+
+        }
+
+        & .btn {
+            min-height: 60px;
+        }
+    }
+
+    &__text-wrap {
+        max-width: 500px;
+        width: 45%;
+
+        @media (max-width: 1300px) {
+           width: 100%;
+           margin-bottom: 60px;
+           max-width: none;
+           text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        
+        & > strong {
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-size: 35px;
+        font-weight: 200;
+        line-height: 1.28em;
+        margin-bottom: 57px;
+        text-transform: uppercase;
+
+        @media (max-width: $md3+px) {
+            font-size: 29px;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        height: 230px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        & div:nth-child(2) {
+            flex: 1 1 auto;
+            background-color: #fff;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: 3;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 2.4px;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        color: $textColor;
+        transition: all .3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+
+                & .promo-header__scroll-icon {
+                    border-color: $mainColor;
+
+                    & svg path {
+                        stroke: $mainColor !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &__scroll-icon {
+        margin-top: 15px;
+        height: 58px;
+        width: 58px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $textColor;
+        transition: all .3s ease;
+
+        & svg {
+            display: block;
+            animation: arrowAnim 2s ease infinite;
+            & path {
+                transition: all .3s ease;
+            }
+        }
+
+        @keyframes arrowAnim {
+            0% {transform: translateY(-5px);}
+            50% {transform: translateY(5px);}
+            100% {transform: translateY(-5px);}
+        }
+    }
+}
+
+
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  
+
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+  }

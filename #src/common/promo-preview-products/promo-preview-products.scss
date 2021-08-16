@@ -1,0 +1,131 @@
+.promo-preview-products {
+    position: relative;
+    width: 100%;
+    max-width: 793px;
+    height: 653px;
+    overflow: visible;
+
+    @media (max-width: $md3+px) {
+        max-width: none;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+       
+    }
+
+    &__item {
+        height: 350px;
+        width: 350px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 21px;
+        color: $textColor;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $textColor;
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.73);
+            }
+        }   
+
+        @media (max-width: $md3+px) {
+            position: relative;
+            margin-bottom: 10px;
+            height: 250px;
+            width: 250px;
+        }
+
+        @media (min-width: 768px) {
+            &.item-1 {
+                top: 79px;
+                right: -28px;
+                transform: scale(0.6);
+            }
+    
+            &.item-2 {
+                left: -19px;
+                top: 125px;
+                transform: scale(0.87);
+            }
+            &.item-3 {
+                top: 0;
+                left: 235px;
+            }
+            &.item-4 {
+                bottom: 0;
+                left: 337px;
+            }
+            &.item-5 {
+                bottom: -65px;
+                right: -85px;
+                transform: scale(0.5);
+            }
+        }
+
+
+    }
+
+    &__wrap {
+        height: 100%;
+        width: 100%;
+        padding: 25px;
+        border-radius: 50%;
+        border: 1px solid $mainColor;
+        text-align: center;
+    }
+
+    &__img {
+        overflow: hidden;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+
+        @media (max-width: $md3+px) {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        & img {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 6.25px;
+        line-height: 1em;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 2.4px;
+        line-height: normal;
+        text-transform: uppercase;
+        color: $textColor;
+
+        @media (max-width: $md3+px) {
+            font-size: 12px;
+        }
+
+        & svg {
+            color: #17b3d6;
+        }
+    }
+}

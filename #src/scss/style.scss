@@ -1,0 +1,368 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== FONTS ===========================================================================================
+@import "fonts";
+// ==== // FONTS ===========================================================================================
+
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
+// ==== Normalize ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<MIXINE>===============================================================================================
+@import "mixins.scss";
+//</MIXINE>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "plagins/fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== PLAGINS ===========================================================================================
+@import "plagins/swiper-bundle";
+//@import "plagins/drift-basic";
+// ==== // PLAGINS ===========================================================================================
+
+// ==== FORM STYLE DEFAULT ===========================================================================================
+//@import "forms";
+// ==== FORM STYLE DEFAULT ===========================================================================================
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+	height: 100%;
+}
+html,
+body {
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.4rem;
+	transition: opacity 0.8s ease;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	&.is-load {
+		& ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+@keyframes preloadBody {
+	from {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.center {
+	text-align: center;
+}
+
+._page {
+	flex: 1 1 auto;
+	padding: 1px 0;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-lg {
+	max-width: 1760px;
+	padding: 0 15px;
+	width: 100%;
+}
+.container {
+	max-width: 1510px !important;
+	width: auto;
+	margin: 0 auto;
+	padding: 0 15px !important;
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+// === title ========================================================================
+.title-1 {
+	font-size: 45px;
+	font-weight: 300;
+	line-height: 1.17em;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0;
+
+	@media (max-width: $md3+px) {
+		font-size: 38px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 32px;
+	}
+
+	& > strong {
+		font-weight: 500;
+	}
+}
+.title-2 {
+}
+
+.title-3 {
+}
+
+.title-4 {
+}
+
+.title-5 {
+}
+.title-6 {
+}
+
+.suptitle {
+}
+.subtitle {
+}
+
+.link-icon-right {
+	display: inline-flex;
+	align-items: center;
+	color: $mainColor;
+	font-family: R$secondFontFamily;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 2.4px;
+	line-height: normal;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+
+	& svg {
+		transition: all 0.3s ease;
+		margin-left: 7px;
+		width: 28px;
+		height: auto;
+		display: block;
+		margin-bottom: -2px;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $mainColor2;
+			& svg {
+				transform: translateX(5px);
+			}
+		}
+	}
+}
+
+// === and title ========================================================================
+
+// === btn ========================================================================
+.btn {
+	display: inline-flex;
+	min-height: 51px;
+	border-radius: 3px;
+	padding-left: 42px;
+	padding-right: 42px;
+	color: $textColor;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 2.4px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	align-items: center;
+	transition: all 0.3s ease;
+	border: none;
+
+	@media (max-width: $md4+px) {
+		padding-left: 20px;
+		padding-right: 20px;
+		min-height: 41px;
+	}
+
+	&.btn-light {
+		background-color: #ffffff;
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.53);
+
+		@media (min-width: 992px) {
+			&:hover {
+				box-shadow: 0 0 40px rgba(255, 255, 255, 0.73);
+			}
+		}
+	}
+}
+
+// === and btn ========================================================================
+
+.input {
+}
+
+.textarea {
+}
+
+.link {
+}
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.625em;
+
+	& h1 {
+	}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
+
+	& h5 {
+	}
+	& h6 {
+	}
+
+	& p {
+	}
+
+	& ul {
+	}
+
+	& ol {
+	}
+
+	& figure {
+	}
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+// ==== BLOCKS =====================================================
+@import "../common/header/header";
+@import "../common/footer/footer";
+@import "../common/promo-preview-products/promo-preview-products";
+@import "../common/text-image-block/text-image-block";
+@import "../common/bubbles/bubbles";
+// ==== BLOCKS =====================================================
+
+// ==== PAGES =====================================================
+@import "pages/home";
+// ==== AND PAGES =====================================================
