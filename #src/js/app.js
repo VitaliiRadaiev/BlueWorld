@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
 	@@include('../common/promo-preview-products/promo-preview-products.js');
 	@@include('../common/bubbles/bubbles.js');
 	@@include('../common/product-slider/product-slider.js');
+	@@include('../common/story-slider/story-slider.js');
 	
 });
 
