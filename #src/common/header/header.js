@@ -22,6 +22,10 @@
         }
 
         setMenuHeight();
+        let id = setInterval(setMenuHeight, 200);
+        setTimeout(() => {
+            clearInterval(id);
+        }, 1000)
         window.addEventListener('resize', setMenuHeight);
         window.addEventListener('scroll', setMenuHeight);
     }
