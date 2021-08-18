@@ -11,6 +11,26 @@
         margin-bottom: -95px;
     }
 
+    &.hero_v2 {
+        &.hero_mb {
+            margin-bottom: -233px;
+        }
+
+        & .hero__bg {
+            &::before {
+                display: none;
+            }
+
+            & img {
+                object-position: top;
+            }
+        }
+
+        & .hero__body {
+            min-height: 551px;
+        }
+    }
+
     &__bg {
         position: absolute;
         top: 0;

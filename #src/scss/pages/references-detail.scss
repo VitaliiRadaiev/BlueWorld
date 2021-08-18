@@ -1,0 +1,49 @@
+.article {
+    padding: 0 40px;
+
+    @media (max-width: 374.98px) {
+        padding: 0 20px;
+    }
+
+    &__body {
+        max-width: 970px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+        border-radius: 3px;
+        background-color: #ffffff;
+        padding-top: 104px;
+    }
+
+    &__container {
+        max-width: 850px;
+        padding: 0 40px;
+
+        @media (max-width: $md3) {
+            padding: 0 20px;
+        }
+    }
+
+    &__suptitle {
+    }
+
+    &__title {
+    }
+
+    &__bottom {
+    }
+
+    &__link-back {
+    }
+}
+
+.slider {
+    &__text {
+    }
+}
+
+.share-block {
+    &__title {
+    }
+}
+
+.social {
+}
