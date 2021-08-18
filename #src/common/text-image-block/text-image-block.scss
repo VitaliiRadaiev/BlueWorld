@@ -1,6 +1,7 @@
 .text-image-block {
     margin-bottom: 31px;
     position: relative;
+    z-index: 3;
 
     @media (max-width: $md3+px) {
         margin-bottom: 0;
@@ -11,8 +12,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 4;
-        width: 200px;
+        z-index: -1;
+        width: 250px;
         transform: translate(-50%, -50%);
     }
 

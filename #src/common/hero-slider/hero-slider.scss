@@ -1,0 +1,114 @@
+.hero-slider {
+    position: relative;
+    margin-bottom: 78px;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        & .swiper-slide {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 45%;
+                height: 100%;
+                z-index: 2;
+                background-image: linear-gradient(
+                    to left,
+                    rgba(20, 46, 74, 0) 0%,
+                    rgba(20, 46, 74, 0.59) 36%,
+                    #142e4a 100%
+                );
+
+                @media (max-width: $md3+px) {
+                    width: 100%;
+                }
+            }
+
+            & img {
+                object-position: top;
+            }
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        min-height: 710px;
+        padding-top: 140px;
+        padding-bottom: 168px;
+        color: $textColorLight;
+
+        @media (max-width: $md3+px) {
+            min-height: auto;
+            padding-top: 50px;
+            padding-bottom: 70px;
+        }
+
+        & .swiper-pagination {
+            text-align: left;
+            bottom: 110px;
+            margin-left: -7px;
+
+            @media (max-width: $md3+px) {
+                bottom: 30px;
+            }
+            & .swiper-pagination-bullet {
+                width: 14px;
+                height: 14px;
+                border: 2px solid #ffffff;
+                opacity: 1;
+                margin: 0 7px;
+                background-color: transparent;
+
+                &.swiper-pagination-bullet-active {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    &__suptitle {
+        font-family: $secondFontFamily;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 2.1px;
+        line-height: 1.21em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+        @media (max-width: $md3+px) {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 63px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__subtitle {
+        max-width: 572px;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 1.32em;
+        text-transform: uppercase;
+        margin-bottom: 64px;
+
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}

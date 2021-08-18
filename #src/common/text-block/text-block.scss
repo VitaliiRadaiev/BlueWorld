@@ -1,0 +1,7 @@
+.text-block {
+    margin-bottom: 108px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 80px;
+    }
+}

@@ -8,18 +8,18 @@ window.addEventListener('load', function () {
 	document.body.classList.add('is-load');
 
 	// ==== ADD PADDING-TOP ================================
-	// {
-	// 	let wrapper = document.querySelector('._page._padding-top');
-	// 	if (wrapper) {
-	// 		let header = document.querySelector('.header');
-	// 		if(header) {
-	// 			const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
-	// 			setPedding();
-	// 			window.addEventListener('resize', setPedding);
-	// 		}
+	{
+		let wrapper = document.querySelector('._padding-top');
+		if (wrapper) {
+			let header = document.querySelector('.header');
+			if(header) {
+				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
+				setPedding();
+				window.addEventListener('resize', setPedding);
+			}
 			
-	// 	}
-	// }
+		}
+	}
 	// ==== AND ADD PADDING-TOP ================================
 
 
@@ -885,8 +885,19 @@ function setSameHeight(items) {
     if(navbarToggle && menu) {
         navbarToggle.addEventListener('click', () => {
             header.classList.toggle('menu-is-open');
-            _slideToggle(menu, 400);
+            menu.classList.toggle('open');
+            document.body.classList.toggle('lock');
         })
+
+        const setMenuHeight = () => {
+            if(document.documentElement.clientWidth < 992) {
+                menu.style.height = document.documentElement.clientHeight - header.clientHeight + 'px';
+            }
+        }
+
+        setMenuHeight();
+        window.addEventListener('resize', setMenuHeight);
+        window.addEventListener('scroll', setMenuHeight);
     }
 };
 	{
@@ -1047,6 +1058,51 @@ function setSameHeight(items) {
                 dataSlider.slideNext();
             })
         })
+    }
+};
+	{
+    let heroSlider = document.querySelector('.hero-slider');
+    if(heroSlider) {
+        let bgSlider = heroSlider.querySelector('.hero-slider__bg');
+        let bodySlider = heroSlider.querySelector('.hero-slider__body');
+       
+        if(bgSlider && bodySlider) {
+            let dataBgSlider = new Swiper(bgSlider, {
+                effect: 'fade',
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                preloadImages: false,
+                lazy: {
+                	loadPrevNext: true,
+                },
+            });
+
+            let dataBodySlider = new Swiper(bodySlider, {
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                pagination: {
+                	el: heroSlider.querySelector('.swiper-pagination'),
+                	clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        autoHeight: true,
+                    },
+                    992: {
+                        autoHeight: false,
+                    },
+                },
+            });
+
+            dataBodySlider.controller.control = dataBgSlider
+        }
     }
 };
 	

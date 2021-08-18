@@ -1,0 +1,23 @@
+.newsletter {
+    margin-bottom: 89px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 80px;
+    }
+
+    &__body {
+        min-height: 349px;
+        background: $gradient;
+        border-radius: 6px;
+        padding: 61px 100px 46px 85px;
+        color: $textColorLight;
+
+        @media (max-width: $md3+px) {
+            padding: 40px 20px;
+        }
+    }
+
+    &__title {
+        max-width: 320px;
+        margin-bottom: 30px;
+    }
+}

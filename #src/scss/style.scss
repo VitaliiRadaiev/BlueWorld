@@ -68,7 +68,7 @@ section {
 	display: block;
 }
 html {
-	font-size: 10px;
+	font-size: 16px;
 	height: 100%;
 }
 html,
@@ -83,7 +83,7 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
-	font-size: 1.4rem;
+	font-size: 1rem;
 	transition: opacity 0.8s ease;
 	display: flex;
 	flex-direction: column;
@@ -178,16 +178,39 @@ textarea {
 }
 
 .container-lg {
-	max-width: 1760px;
-	padding: 0 15px;
+	max-width: 1810px;
+	padding: 0 40px;
 	width: 100%;
+
+	@media (max-width: 374.98px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 .container {
-	max-width: 1510px !important;
+	max-width: 1560px !important;
 	width: auto;
 	margin: 0 auto;
-	padding-left: 15px !important;
-	padding-right: 15px !important;
+	padding-left: 40px !important;
+	padding-right: 40px !important;
+
+	@media (max-width: 374.98px) {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+.container-sm {
+	max-width: 1250px;
+	width: auto;
+	margin: 0 auto;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	@media (max-width: 374.98px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 .ibg {
@@ -200,6 +223,10 @@ textarea {
 		left: 0;
 		object-fit: cover;
 	}
+}
+
+.bg {
+	background-color: #faf6f1;
 }
 
 // === title ========================================================================
@@ -256,6 +283,10 @@ textarea {
 	text-transform: uppercase;
 	display: flex;
 	flex-direction: column;
+
+	@media (max-width: $md3+px) {
+		font-size: 21px;
+	}
 
 	& > strong {
 		font-weight: 700;
@@ -358,6 +389,7 @@ textarea {
 		padding-left: 23px;
 		padding-right: 23px;
 		border-radius: 6px;
+		letter-spacing: 0;
 
 		& svg {
 			margin-left: 30px;
@@ -400,6 +432,11 @@ input.form-control {
 	& h1 {
 	}
 	& h2 {
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1.32em;
+		text-transform: uppercase;
+		margin-bottom: 0.64em;
 	}
 	& h3 {
 	}
@@ -412,6 +449,10 @@ input.form-control {
 	}
 
 	& p {
+
+		& ~ h2 {
+			margin-top: 2.76em;
+		}
 	}
 
 	& ul {
@@ -421,6 +462,17 @@ input.form-control {
 	}
 
 	& figure {
+	}
+
+	&.col-2 {
+		@media (min-width: 768px) {
+			column-count: 2;
+			column-gap: 29px;
+
+			& h2 {
+				column-span: all;
+			}
+		}
 	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -434,8 +486,17 @@ input.form-control {
 @import "../common/product-slider/product-slider";
 @import "../common/story-slider/story-slider";
 @import "../common/usp-block/usp-block";
+@import "../common/hero/hero";
+@import "../common/products/products";
+@import "../common/card/card";
+@import "../common/contact-block/contact-block";
+@import "../common/text-block/text-block";
+@import "../common/hero-slider/hero-slider";
+@import "../common/newsletter/newsletter";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
+@import "pages/products";
+@import "pages/references"
 // ==== AND PAGES =====================================================

@@ -11,7 +11,18 @@
     if(navbarToggle && menu) {
         navbarToggle.addEventListener('click', () => {
             header.classList.toggle('menu-is-open');
-            _slideToggle(menu, 400);
+            menu.classList.toggle('open');
+            document.body.classList.toggle('lock');
         })
+
+        const setMenuHeight = () => {
+            if(document.documentElement.clientWidth < 992) {
+                menu.style.height = document.documentElement.clientHeight - header.clientHeight + 'px';
+            }
+        }
+
+        setMenuHeight();
+        window.addEventListener('resize', setMenuHeight);
+        window.addEventListener('scroll', setMenuHeight);
     }
 }

@@ -52,6 +52,10 @@
   height: 800px;
   margin: 0 auto;
   opacity: 0.5;
+
+  @media (max-width: $md2+px) {
+	  height: 460px;
+  }
 }
 
 .bubble-container {  

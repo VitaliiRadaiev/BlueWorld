@@ -1,0 +1,52 @@
+.contact-block {
+    margin-bottom: 127px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 80px;
+    }
+    &__body {
+        background: $gradient;
+        min-height: 349px;
+        padding: 50px 72px 26px 85px;
+        border-radius: 6px;
+        color: $textColorLight;
+
+        @media (max-width: $md3+px) {
+            padding: 40px 15px 40px;
+        }
+
+        & .btn.btn-primary {
+            letter-spacing: 0;
+            font-weight: 400;
+
+            & svg {
+                margin-left: 11px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 71px;
+        margin-top: 11px;
+        @media (max-width: $md3+px) {
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+    }
+
+    &__text-wrap {
+        margin-bottom: 42px;
+        margin-right: 17px;
+        & p {
+            margin-bottom: 7px;
+            //text-align: right;
+        }
+    }
+
+    &__img {
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -6,6 +6,32 @@
     z-index: 50;
     transition: all .3s ease;
 
+    &.navbar  {
+        padding: 0;
+    }
+
+    &.bg-white {
+        background-color: #fff;
+
+        & .nav-link {
+            &:not(.active) {
+                color: $textColor;
+            }
+        }
+
+        & .btn.btn-light {
+            background: $gradient;
+            color: $textColorLight;
+
+
+            @media (min-width: 992px) {
+                &:hover {
+                    box-shadow: 0 0 20px rgba($textColor, 0.73);
+                }
+            }
+        }
+    }
+
     &.is-scroll {
         background-color: #fff;
 
@@ -43,7 +69,7 @@
         }
     }
 
-    &:not(.is-scroll):not(.menu-is-open) {
+    &:not(.is-scroll):not(.menu-is-open):not(.bg-white) {
         & .header__logo {
             & svg {
                 & path {
@@ -120,13 +146,29 @@
             top: 100%;
             left: 0;
             width: 100%;
-            padding: 30px 15px;
+            padding: 30px 40px;
             background-color: #fff;
-            display: none;
+            height: calc(100vh - 110px);
+            visibility: hidden;
+            opacity: 0;
+            transform: perspective(600px) translate(0px, 100%) rotateX(45deg);
+            transition: all .6s ease;
+            overflow-y: auto;
+            
+            &.open {
+                opacity: 1;
+                visibility: visible;
+                transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+            }
+        }
+
+        @media (max-width: 374.98px) {
+            padding: 30px 15px;
         }
 
         @media (min-width: 992px) {
             display: block !important;
+            height: auto !important;
         }
 
         & .navbar-nav {
