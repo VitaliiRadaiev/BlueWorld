@@ -37,6 +37,7 @@ window.addEventListener('load', function () {
 	@@include('../common/story-slider/story-slider.js');
 	@@include('../common/hero-slider/hero-slider.js');
 	@@include('../common/slider/slider.js');
+	@@include('../common/product-details-card/product-details-card.js');
 	
 });
 

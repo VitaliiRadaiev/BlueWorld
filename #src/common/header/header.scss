@@ -30,6 +30,10 @@
                 }
             }
         }
+
+        & .navbar-toggler {
+            color: $textColor;
+        }
     }
 
     &.is-scroll {
@@ -67,6 +71,10 @@
                 min-height: 75px;
             }
         }
+
+        & .navbar-toggler {
+            color: $textColor;
+        }
     }
 
     &:not(.is-scroll):not(.menu-is-open):not(.bg-white) {
@@ -99,6 +107,10 @@
                 }
             }
         }
+
+        & .navbar-toggler {
+            color: $textColor;
+        }
     }
 
     & .btn {
@@ -108,7 +120,7 @@
     }
 
     & .navbar-toggler {
-        color: $textColor;
+        color: $textColorLight;
         font-size: 36px;
         margin-left: 40px;
 

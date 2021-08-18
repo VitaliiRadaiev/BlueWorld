@@ -17,7 +17,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: $gradient;
+        background: $gradient2;
     }
 
     &__body {
@@ -432,6 +432,7 @@
 }
 
 .usp-block-card {
+    text-align: center;
     &__icon {
         height: 52px;
         color: $mainColor2;

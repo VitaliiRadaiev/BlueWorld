@@ -274,6 +274,15 @@ textarea {
 }
 
 .title-3 {
+	font-size: 30px;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	line-height: 1.2em;
+	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 26px;
+	}
 }
 
 .title-4 {
@@ -331,6 +340,17 @@ textarea {
 				transform: translateX(5px);
 			}
 		}
+	}
+}
+
+.img-full-width {
+	height: 758px;
+
+	@media (max-width: $md2+px) {
+		height: 550px;
+	}
+	@media (max-width: $md3+px) {
+		height: 450px;
 	}
 }
 
@@ -461,6 +481,18 @@ input.form-control {
 		& ~ h2 {
 			margin-top: 2.76em;
 		}
+
+		& a {
+			color: $mainColor2;
+			text-decoration: underline;
+			transition: all .3s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $mainColor;
+				}
+			}
+		}
 	}
 
 	& ul {
@@ -517,6 +549,7 @@ input.form-control {
 		}
 	}
 
+
 	&.col-2 {
 		@media (min-width: 768px) {
 			column-count: 2;
@@ -547,6 +580,7 @@ input.form-control {
 @import "../common/hero-slider/hero-slider";
 @import "../common/newsletter/newsletter";
 @import "../common/slider/slider";
+@import "../common/product-details-card/product-details-card";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -554,4 +588,5 @@ input.form-control {
 @import "pages/products";
 @import "pages/references";
 @import "pages/references-detail";
+@import "pages/product-detail";
 // ==== AND PAGES =====================================================

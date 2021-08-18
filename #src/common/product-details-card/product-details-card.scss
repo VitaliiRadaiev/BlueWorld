@@ -1,0 +1,128 @@
+.product-details-card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+
+    @media (max-width: $md4+px) {
+        padding: 10px;
+    }
+
+    &__body {
+        border: 1px solid $mainColor;
+        border-radius: 10px;
+        padding: 27px 20px 28px;
+        
+        @media (min-width: 992px) {
+            display: flex;
+        }
+
+        @media (max-width: $md4+px) {
+            padding: 10px;
+        }
+    }
+
+    &__col-1 {
+        flex: 0 0 40.5%;
+        min-width: 0;
+        margin-bottom: 40px;
+        @media (min-width: 992px) {
+            margin-right: 54px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__col-2 {
+        flex: 1 1 auto;
+
+        @media (max-width: $md3+px) {
+            overflow: auto;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 18px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            bottom: -8px;
+            left: 50%;
+            width: 100%;
+            max-width: 141px;
+            transform: translateX(-50%);
+            height: 1px;
+            background-color: rgba(#707070, 0.32);
+        }
+    }
+
+    &__subtitle {
+        font-family: $secondFontFamily;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        line-height: 1.21em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__slider {
+        padding-bottom: 40px;
+        & .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 259px;
+
+            @media (max-width: $md4+px) {
+                height: 200px;
+            }
+
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+                height: auto;
+                width: auto;
+            }
+        }
+
+        & .swiper-pagination {
+            bottom: 2px;
+            & .swiper-pagination-bullet {
+                opacity: 1;
+                background-color: transparent;
+                height: 10px;
+                width: 10px;
+                border: 1px solid $textColor;
+                margin: 0 2.5px;
+                &.swiper-pagination-bullet-active {
+                    background-color: $textColor;
+                }
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+        @media (max-width: $md3+px) {
+            min-width: 360px;
+        }
+        & td {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.375em;
+            height: 44px;
+            & > strong {
+                font-weight: 500;
+            }
+
+            &:first-child {
+                padding-right: 20px;
+            }
+        }
+    }
+}

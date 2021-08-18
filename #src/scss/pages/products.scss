@@ -1,6 +1,6 @@
 .products {
     margin-bottom: 95px;
-
+    text-align: center;
     @media (max-width: $md3+px) {
         margin-bottom: 80px;
     }
@@ -44,5 +44,9 @@
                 color: $mainColor2;
             }
         }
+    }
+
+    &__link {
+        margin-top: 82px;
     }
 }
