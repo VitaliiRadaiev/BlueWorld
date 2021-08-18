@@ -5,45 +5,192 @@
         padding: 0 20px;
     }
 
+    & + .contact-block {
+        & .container-sm {
+            max-width: 1050px;
+        }
+
+        & .contact-block__body  {
+            border-radius: 0 0 6px 6px;
+            min-height: 334px;
+            padding-top: 33px;
+        }
+
+        & .contact-block__title {
+            margin-bottom: 37px;
+        }
+    }
+
     &__body {
         max-width: 970px;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
         border-radius: 3px;
         background-color: #ffffff;
         padding-top: 104px;
+        padding-bottom: 48px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        &.text-content {
+            & h2 {
+                font-weight: 300;
+                margin-bottom: 1.9em;
+
+                & > strong {
+                    font-weight: 500;
+                }
+            }
+
+            & .slider {
+                margin-top: 90px;
+                margin-bottom: 61px;
+
+                @media (max-width: $md3+px) {
+                    margin-top: 50px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
     }
 
     &__container {
         max-width: 850px;
         padding: 0 40px;
 
-        @media (max-width: $md3) {
+        @media (max-width: $md3+px) {
             padding: 0 20px;
         }
     }
 
     &__suptitle {
+        color: #142e4a;
+        font-family: $secondFontFamily;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        line-height: 1.21em;
+        margin-bottom: 10px;
     }
 
     &__title {
+        margin-bottom: 1.15em;
+        & strong {
+            font-weight: 700;
+        }
     }
 
     &__bottom {
+        padding-top: 45px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 30px;
+        }
     }
 
     &__link-back {
-    }
-}
+        color: #2f2f2f;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        transition: all 0.3s ease;
+        margin-bottom: 67px;
+        display: inline-flex;
+        align-items: center;
 
-.slider {
-    &__text {
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+
+                & svg {
+                    transform: translateX(-5px);
+
+                    & path {
+                        stroke: $mainColor;
+                    }
+                }
+            }
+        }
+
+        & svg,
+        & img {
+            margin-right: 19px;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+            & path {
+                transition: all 0.3s ease 0.1s;
+            }
+        }
     }
 }
 
 .share-block {
+    text-align: center;
+
     &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        margin-bottom: 1px;
+        text-align: center;
+        align-items: center;
+
+        & img {
+            max-width: 90px;
+            width: 100%;
+            height: auto;
+            margin-top: 5px;
+        }
     }
 }
 
 .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+
+    & > li {
+        margin: 10px 17.5px;
+
+        & > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            width: 34px;
+
+            & img, & svg {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            & svg {
+                & path {
+                    transition: all .3s ease;
+                }
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & svg {
+                        & path {
+                            fill: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

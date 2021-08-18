@@ -427,7 +427,7 @@ input.form-control {
 .text-content {
 	font-size: 16px;
 	font-weight: 300;
-	line-height: 1.625em;
+	line-height: 1.55em;
 
 	& h1 {
 	}
@@ -437,6 +437,10 @@ input.form-control {
 		line-height: 1.32em;
 		text-transform: uppercase;
 		margin-bottom: 0.64em;
+
+		@media (max-width: $md3+px) {
+			font-size: 19px;
+		}
 	}
 	& h3 {
 	}
@@ -446,10 +450,14 @@ input.form-control {
 	& h5 {
 	}
 	& h6 {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.625em;
+		margin-bottom: 0;
 	}
 
 	& p {
-
+		margin-bottom: 1.31em;
 		& ~ h2 {
 			margin-top: 2.76em;
 		}
@@ -462,6 +470,51 @@ input.form-control {
 	}
 
 	& figure {
+	}
+
+	& q {
+		margin-top: 52px;
+		margin-bottom: 53px;
+		display: block;
+
+		@media (max-width: $md3+px) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+		& > b {
+			display: block;
+			font-size: 55px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 1.18em;
+			text-transform: uppercase;
+			margin-bottom: 38px;
+
+			@media (max-width: $md3+px) {
+				font-size: 45px;
+				margin-bottom: 25px;
+			}
+
+			@media (max-width: $md4+px) {
+				font-size: 30px;
+			}
+		}
+
+		& > p {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.44em;
+			margin-bottom: 6px;
+
+			& > strong {
+				font-weight: 400;
+			}
+		}
 	}
 
 	&.col-2 {
@@ -493,6 +546,7 @@ input.form-control {
 @import "../common/text-block/text-block";
 @import "../common/hero-slider/hero-slider";
 @import "../common/newsletter/newsletter";
+@import "../common/slider/slider";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

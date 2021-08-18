@@ -17,9 +17,9 @@
     }
 
     &__body {
-        max-width: 1205px;
+        max-width: 1255px;
         margin: 0 auto;
-        padding: 393px 15px 160px;
+        padding: 393px 40px 160px;
         min-height: 1065px;
         color: #fff;
         position: relative;
@@ -28,6 +28,11 @@
         @media (max-width: $md2+px) {
             padding-bottom: 10px;
             padding-top: 200px;
+        }
+
+        @media (max-width: 374.98px) {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 

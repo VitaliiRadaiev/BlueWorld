@@ -1,0 +1,40 @@
+.slider {
+    & .swiper-container {
+        margin-bottom: 23px;
+    }
+    & .swiper-slide {
+        height: 542px;
+
+        @media (max-width: $md3+px) {
+            height: 400px;
+        }
+        @media (max-width: $md4+px) {
+            height: 300px;
+        }
+    }
+
+    & .swiper-pagination {
+        //bottom: 110px;
+
+        & .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            border: 2px solid #ffffff;
+            opacity: 1;
+            margin: 0 7px;
+            background-color: transparent;
+
+            &.swiper-pagination-bullet-active {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: 26px;
+    }
+}
