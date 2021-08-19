@@ -13,12 +13,19 @@
         margin: 0 auto 36px;
 
         @media (max-width: $md3+px) {
-            flex-wrap: nowrap;
-            margin-right: -15px;
-            max-width: none;
-            overflow-x: auto;
-            justify-content: start;
+            display: none;
         }
+    }
+
+    &__mobile-nav {
+        margin-bottom: 35px;
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__mobile-label {
+        margin-bottom: 10px; 
     }
 
     &__nav-item {

@@ -2572,6 +2572,19 @@ input.form-control {
   font-weight: 300;
 }
 
+.form-select {
+  min-height: 51px;
+  border-radius: 5px;
+  background-position: right 9px 19px;
+  color: #142e4a;
+  font-family: "SofiaPro", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .text-content {
   font-size: 16px;
   font-weight: 300;
@@ -4515,6 +4528,14 @@ input.form-control {
   margin: 0 auto 36px;
 }
 
+.references__mobile-nav {
+  margin-bottom: 35px;
+}
+
+.references__mobile-label {
+  margin-bottom: 10px;
+}
+
 .references__nav-item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -5025,6 +5046,10 @@ input.form-control {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+
+  .references__mobile-nav {
+    display: none;
   }
 
   .references__list-item:nth-child(even) .references__img {
@@ -5762,14 +5787,7 @@ input.form-control {
   }
 
   .references__nav {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    margin-right: -15px;
-    max-width: none;
-    overflow-x: auto;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    display: none;
   }
 
   .references__nav-item {

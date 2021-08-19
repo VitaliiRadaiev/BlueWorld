@@ -27,7 +27,6 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 
-	@@include('forms.js');
 	@@include('_function.js');
 	@@include('files/dynamic_adapt.js');
 	@@include('../common/header/header.js');
