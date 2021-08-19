@@ -3,46 +3,63 @@
     @include mb();
 
     &__body {
-        max-width: 1920px;
-        margin: 0 auto;;
         & .swiper-container {
             padding: 50px 80px 40px;
             margin: -50px -80px -40px;
         }
 
         & .swiper-slide {
-            & > .col {
-                position: relative;
-                width: auto;
+            height: auto;
+            & > div.d-md-flex {
+                max-width: 1920px;
+                margin: 0 auto;
+                height: 100%;
 
-                &:nth-child(1) {
-                    flex: 0 0 30%;
-                    @media (max-width: $md1+px) {
-                        display: none;
-                    }
+                @media (min-width: 992px) {
+                    min-height: 700px;
                 }
-                &:nth-child(2) {
-                    flex: 1 1 auto;
-                    padding-right: 15px;
-                    @media (max-width: $md1+px) {
-                        padding-left: 15px;
-                    }
-                }
-                &:nth-child(3) {
-                    flex: 0 0 30%;
 
-                    @media (max-width: $md3+px) {
-                        display: none;
+                & > .col {
+                    position: relative;
+                    width: auto;
+    
+                    &:nth-child(1) {
+                        flex: 0 0 30%;
+                        @media (max-width: $md1+px) {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(2) {
+                        flex: 1 1 auto;
+                        padding-right: 15px;
+    
+                        @media (max-width: $md1+px) {
+                            padding-left: 40px;
+                            padding-right: 40px;
+                            height: 100%;
+                        }
+    
+                        @media (max-width: 374.98px) {
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
+                    }
+                    &:nth-child(3) {
+                        flex: 0 0 30%;
+    
+                        @media (max-width: $md3+px) {
+                            display: none;
+                        }
                     }
                 }
             }
 
             &.swiper-slide-active {
-                & .story-slider__bottom {
-                    &::after {
-                        opacity: 1;
-                    }
-                }
+                // & .story-slider__bottom {
+                //     &::after {
+                //         opacity: 1;
+                //     }
+                // }
 
                 & .story-slider__img.img-3 {
                     opacity: 1;
@@ -135,17 +152,47 @@
     &__bottom {
         position: relative;
         display: inline-block;
+        z-index: 3;
 
         &:after {
             position: absolute;
             content: "";
             top: calc(50% - 0.5px);
-            left: calc(100% + 75px);
-            width: 60vw;
+            left: calc(100% + 40px);
+            width: 100vw;
             height: 1px;
-            background-color: rgba($textColor, 0.68);
-            opacity: 0;
+            background-color: #9ea7b3;
             transition: all 0.3s ease;
+
+        }
+
+    }
+
+    &__btn-next {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 40px;
+            transform: translateX(-100%);
+            background-color: #fff;
+            z-index: -1;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 40px;
+            transform: translateX(100%);
+            background-color: #fff;
+            z-index: -1;
         }
     }
 }

@@ -342,6 +342,36 @@ textarea {
 		}
 	}
 }
+.link-icon-left {
+	display: inline-flex;
+	align-items: center;
+	color: $mainColor;
+	font-family: R$secondFontFamily;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 2.4px;
+	line-height: normal;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+
+	& svg {
+		transition: all 0.3s ease;
+		margin-right: 7px;
+		width: 28px;
+		height: auto;
+		display: block;
+		margin-bottom: -2px;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $mainColor2;
+			& svg {
+				transform: translateX(-5px);
+			}
+		}
+	}
+}
 
 .img-full-width {
 	height: 758px;

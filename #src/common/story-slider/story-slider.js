@@ -4,19 +4,21 @@
         let dataSlider = new Swiper(storySlider.querySelector('.swiper-container'), {
             autoplay: {
                 delay: 4000,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
             slidesPerView: 1,
             spaceBetween: 50,
-            autoHeight: true,
             speed: 800,
-            loop: true,
         });
 
         let buttons = storySlider.querySelectorAll('.story-slider__btn-next');
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
-                dataSlider.slideNext();
+                if(btn.classList.contains('link-icon-left')) {
+                    dataSlider.slideTo(0);
+                } else {
+                    dataSlider.slideNext();
+                }
             })
         })
     }
