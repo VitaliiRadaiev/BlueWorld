@@ -1,0 +1,39 @@
+.input-file {
+    display: flex;
+    align-items: center;
+
+    & input[type="file"] {
+        display: none;
+    }
+
+    &__btn {
+        flex: 0 0 auto;
+        display: inline-flex;
+        min-height: 46px;
+        border-radius: 3px;
+        background-color: $textColor;
+        align-items: center;
+        padding: 4px 22px;
+        color: $textColorLight;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+        margin-right: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-family: $mainFontFamily;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor2;
+            }
+        }
+    }
+
+    &__info {
+        flex: 1 1 auto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.25em;
+    }
+}

@@ -436,8 +436,7 @@ textarea {
 		background-color: $mainColor;
 		color: #fff;
 		text-transform: none;
-		padding-left: 23px;
-		padding-right: 23px;
+
 		border-radius: 6px;
 		letter-spacing: 0;
 
@@ -448,6 +447,19 @@ textarea {
 				margin-left: 15px;
 			}
 		}
+		
+		@media (min-width: 992px) {
+			@media (min-width: 992px) {
+				&:hover {
+					box-shadow: 0 0 20px rgba($mainColor, 0.73);
+				}
+			}
+		}
+	}
+
+	&.link-icon-right {
+		padding-left: 23px;
+		padding-right: 23px;
 	}
 }
 
@@ -467,7 +479,19 @@ input.form-control {
 	font-weight: 300;
 }
 
-.textarea {
+textarea.form-control {
+	width: 100%;
+	height: 51px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding-left: 22px;
+	padding-right: 22px;
+	resize: none;
+	color: $textColor;
+	font-family: $mainFontFamily;
+	font-size: 16px;
+	font-weight: 300;
+	height: 219px;
 }
 
 .form-select {
@@ -481,7 +505,19 @@ input.form-control {
 	border: none !important;
 	box-shadow: none !important;
 }
+.form-item {
+	margin-bottom: 13px;
+}
 
+.form-label {
+	display: block;
+	margin-left: 22px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.187em;
+	margin-bottom: 5px;
+
+}
 .link {
 }
 
@@ -527,7 +563,7 @@ input.form-control {
 		& a {
 			color: $mainColor2;
 			text-decoration: underline;
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 
 			@media (min-width: 992px) {
 				&:hover {
@@ -538,6 +574,28 @@ input.form-control {
 	}
 
 	& ul {
+		padding-left: 0;
+		margin-top: 20px;
+		margin-bottom: 29px;
+		& > li {
+			position: relative;
+			padding-left: 40px;
+
+			@media (max-width: $md3+px) {
+				padding-left: 20px;
+			}
+
+			&:before {
+				position: absolute;
+				content: "";
+				top: 12px;
+				left: 2px;
+				height: 4px;
+				width: 4px;
+				border-radius: 50%;
+				background-color: $mainColor;
+			}
+		}
 	}
 
 	& ol {
@@ -591,7 +649,6 @@ input.form-control {
 		}
 	}
 
-
 	&.col-2 {
 		@media (min-width: 768px) {
 			column-count: 2;
@@ -625,6 +682,8 @@ input.form-control {
 @import "../common/product-details-card/product-details-card";
 @import "../common/intro-text/intro-text";
 @import "../common/branche-slider/branche-slider";
+@import "../common/input-file/input-file";
+@import "../common/usps-slider/usps-slider";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -634,4 +693,6 @@ input.form-control {
 @import "pages/references-detail";
 @import "pages/product-detail";
 @import "pages/branche-overview";
+@import "pages/about";
+@import "pages/working";
 // ==== AND PAGES =====================================================

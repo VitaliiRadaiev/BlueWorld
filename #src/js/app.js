@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 
+	@@include('forms.js');
 	@@include('_function.js');
 	@@include('files/dynamic_adapt.js');
 	@@include('../common/header/header.js');
@@ -38,7 +39,8 @@ window.addEventListener('load', function () {
 	@@include('../common/slider/slider.js');
 	@@include('../common/product-details-card/product-details-card.js');
 	@@include('../common/branche-slider/branche-slider.js');
-	
+	@@include('../common/input-file/input-file.js');
+	@@include('../common/usps-slider/usps-slider.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {
