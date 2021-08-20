@@ -6,18 +6,51 @@
     display: flex;
     flex-direction: column;
     color: $textColor;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     height: 100%;
-    
+    position: relative;
+
     @media (min-width: 992px) {
         &:hover {
             color: $textColor;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.26);
+
+            & .card__bg img {
+                transform: scale(1.06);
+            }
         }
     }
 
     @media (max-width: $md3+px) {
         padding: 10px;
+    }
+}
+
+.card__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        border-radius: 6px;
+        background-color: #142e4a;
+        opacity: 0.53;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+    & img {
+        border-radius: 6px;
+        transition: all 1.4s ease;
     }
 }
 
@@ -32,8 +65,9 @@
     padding-top: 37px;
     padding-bottom: 23px;
     text-align: center;
-
-    font-family:$secondFontFamily;
+    position: relative;
+    z-index: 2;
+    font-family: $secondFontFamily;
     font-size: 14px;
     font-weight: 300;
     font-style: normal;
@@ -80,7 +114,7 @@
 
     &:before {
         position: absolute;
-        content: '';
+        content: "";
         left: 50%;
         bottom: -4px;
         height: 1px;
@@ -107,7 +141,7 @@
     @media (max-width: $md3+px) {
         height: 115px;
     }
-    
+
     & img {
         max-width: 100%;
         max-height: 100%;
@@ -115,9 +149,6 @@
         width: auto;
     }
 }
-
-
-
 
 // == card product ============
 .card.card_product {
@@ -172,3 +203,46 @@
     }
 }
 // == // card product ============
+
+.card.card_v2 {
+    & .card-body {
+        min-height: 334px;
+        color: $textColorLight;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media (max-width: $md2+px) {
+            min-height: 280px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 260px;
+        }
+    }
+
+    & .card-title {
+        font-size: 25px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0.15em;
+        line-height: 1.2em;
+        text-transform: uppercase;
+
+        @media (max-width: $md2+px) {
+            font-size: 23px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 21px;
+        }    
+    }
+
+    & .link-icon-right {
+        color: $textColorLight;
+        margin-top: 0;
+        & svg {
+            color: $mainColor2;
+        }
+    }
+}

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<header class="header navbar navbar-expand-lg bg-white">
+    <div class="header__body container-lg d-flex align-items-center mx-auto">
+        <div class="header__logo logo">
+            <a href="#">
+                <img class="img-svg" src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="header__menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">producten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">branches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Referenties</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Over ons</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        nl
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">en</a></li>
+                        <li><a class="dropdown-item" href="#">pl</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="btn btn-light">Contact</a>
+        <button class="navbar-toggler">
+            <i class="fas fa-align-justify"></i>
+        </button>
+    </div>
+</header>
+	<!-- == // TOP LINE ================== -->
+
+
+	<main class="_page branche-overview-page _padding-top">
+		<section class="hero hero_mb">
+			<div class="hero__bg ibg">
+				<img src="img/photo/hero-bg-4.jpg" alt="">
+			</div>
+			<div class="hero__body container d-flex flex-column justify-content-center">
+				<h1 class="hero__title title-1">
+					<strong>
+						In welke branche werk
+					</strong>
+					<strong>
+						jij?
+					</strong>
+				</h1>
+			</div>
+		</section>
+
+		<section class="intro-text">
+			<div class="intro-text__body d-lg-flex container-sm">
+				<div class="col-12 col-lg-5 mb-5 mb-lg-0">
+					<div class="nav-card mx-auto ms-lg-0">
+						<ul class="nav-card__list">
+							<li>
+								<a href="#" class="nav-card__item active">Groothandel</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item">Retail</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item">Rookerij</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item">Foodservice</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item ">Restaurant franchise</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item">Visleverancier</a>
+							</li>
+							<li>
+								<a href="#" class="nav-card__item">Visgroothandel</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-lg-7 ps-lg-5">
+					<div class="intro-text__text text-content">
+						<h2>
+							Wij kennen jouw branche. samen vinden we altijd een passende oplossing
+						</h2>
+						<p>
+							Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur
+							adipiscing elit. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus
+							commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+							porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.
+							Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+							elit.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac
+							consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor
+							ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus
+							posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur
+							purus sit amet fermentum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="text-image-block text-image-block_revers">
+			<div class="bubbles" data-min="4" data-max="8"></div>
+			<div class="bubbles bubbles-2" data-min="7" data-max="14"></div>
+			<div class="container-sm">
+				<div class="text-image-block__item">
+					<div class="row">
+						<div class="col col-12 col-lg-6">
+							<div class="text-image-block__item-images ibg">
+								<img src="img/photo/articles-preview-img-7.jpg" alt="">
+							</div>
+						</div>
+						<div class="col col-12 col-lg-6 d-md-flex flex-column justify-content-center">
+							<div class="text-image-block__item-text-wrap">
+								<h4 class="text-image-block__item-title title-4">
+									<strong>
+										Duis mollis, est non commodo luctus
+									</strong>
+								</h4>
+								<div class="text-image-block__item-text text-content">
+									<p>
+										Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+										mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+										fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet
+										rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper.
+									</p>
+									<p>
+										Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus,
+										tellus ac <a href="#">cursus commodo</a>, tortor mauris condimentum nibh, ut
+										fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare
+										vel eu leo.
+									</p>
+								</div>
+								<a href="#" class="link-icon-right">
+									Optional CTA
+									<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-image-block__item">
+					<div class="row row-cols-lg-2">
+						<div class="col col-12 col-lg-6">
+							<div class="text-image-block__item-images ibg">
+								<img src="img/photo/articles-preview-img-8.jpg" alt="">
+							</div>
+						</div>
+						<div class="col col-12 col-lg-6 d-md-flex flex-column justify-content-center">
+							<div class="text-image-block__item-text-wrap">
+								<h4 class="text-image-block__item-title title-4">
+									<strong>
+										Duurzaamheid voorop. Nullam quis risus eget urna
+									</strong>
+								</h4>
+								<div class="text-image-block__item-text text-content">
+									<p>
+										Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et
+										magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis
+										interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+										vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+										nibh, ut <a href="#">fermentum massa</a> justo sit amet risus. Curabitur blandit
+										tempus porttitor.
+									</p>
+									<p>
+										Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam
+										eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies
+										vehicula ut id elit. Sed posuere consectetur est at lobortis. Sed posuere
+										consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="branche-slider">
+			<div class="bubbles" data-min="6" data-max="20"></div>
+			<div class="container-sm">
+				<h4 class="branche-slider__title title-4"><strong>Bekijk een andere branche</strong></h4>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="card card_v2">
+							<div class="card__bg ibg">
+								<img src="img/photo/card-v2-img-1.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">rookerij</h5>
+								<span class="link-icon-right">
+									bekijken
+									<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+										xmlns:cc="http://creativecommons.org/ns#"
+										xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+										xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+										xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+										xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="29.133627"
+										height="12.920434" viewBox="0 0 29.133627 12.920434" version="1.1" id="svg14"
+										sodipodi:docname="arrow-right.svg"
+										inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+										<metadata id="metadata20">
+											<rdf:RDF>
+												<cc:Work rdf:about="">
+													<dc:format>image/svg+xml</dc:format>
+													<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+													<dc:title></dc:title>
+												</cc:Work>
+											</rdf:RDF>
+										</metadata>
+										<defs id="defs18" />
+										<sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+											objecttolerance="10" gridtolerance="10" guidetolerance="10"
+											inkscape:pageopacity="0" inkscape:pageshadow="2"
+											inkscape:window-width="1920" inkscape:window-height="1017" id="namedview16"
+											showgrid="false" inkscape:zoom="8.1730769" inkscape:cx="12.203326"
+											inkscape:cy="10.363906" inkscape:window-x="-8" inkscape:window-y="-8"
+											inkscape:window-maximized="1" inkscape:current-layer="svg14" />
+										<g id="g12" transform="translate(-20.032,-19.70425)">
+											<g id="g10">
+												<g id="g4">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2"
+														d="m 40.044,31.827 v 0 L 47.5,26.19 v 0 l -7.625,-5.684 v 0"
+														id="path2" />
+												</g>
+												<g id="g8">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2" d="M 47.5,26.167 H 20.032" id="path6" />
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="card card_v2">
+							<div class="card__bg ibg">
+								<img src="img/photo/card-v2-img-2.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Verwerking</h5>
+								<span class="link-icon-right">
+									bekijken
+									<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+										xmlns:cc="http://creativecommons.org/ns#"
+										xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+										xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+										xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+										xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="29.133627"
+										height="12.920434" viewBox="0 0 29.133627 12.920434" version="1.1" id="svg14"
+										sodipodi:docname="arrow-right.svg"
+										inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+										<metadata id="metadata20">
+											<rdf:RDF>
+												<cc:Work rdf:about="">
+													<dc:format>image/svg+xml</dc:format>
+													<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+													<dc:title></dc:title>
+												</cc:Work>
+											</rdf:RDF>
+										</metadata>
+										<defs id="defs18" />
+										<sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+											objecttolerance="10" gridtolerance="10" guidetolerance="10"
+											inkscape:pageopacity="0" inkscape:pageshadow="2"
+											inkscape:window-width="1920" inkscape:window-height="1017" id="namedview16"
+											showgrid="false" inkscape:zoom="8.1730769" inkscape:cx="12.203326"
+											inkscape:cy="10.363906" inkscape:window-x="-8" inkscape:window-y="-8"
+											inkscape:window-maximized="1" inkscape:current-layer="svg14" />
+										<g id="g12" transform="translate(-20.032,-19.70425)">
+											<g id="g10">
+												<g id="g4">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2"
+														d="m 40.044,31.827 v 0 L 47.5,26.19 v 0 l -7.625,-5.684 v 0"
+														id="path2" />
+												</g>
+												<g id="g8">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2" d="M 47.5,26.167 H 20.032" id="path6" />
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="card card_v2">
+							<div class="card__bg ibg">
+								<img src="img/photo/card-v2-img-3.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">foodservice</h5>
+								<span class="link-icon-right">
+									bekijken
+									<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+										xmlns:cc="http://creativecommons.org/ns#"
+										xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+										xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+										xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+										xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="29.133627"
+										height="12.920434" viewBox="0 0 29.133627 12.920434" version="1.1" id="svg14"
+										sodipodi:docname="arrow-right.svg"
+										inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+										<metadata id="metadata20">
+											<rdf:RDF>
+												<cc:Work rdf:about="">
+													<dc:format>image/svg+xml</dc:format>
+													<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+													<dc:title></dc:title>
+												</cc:Work>
+											</rdf:RDF>
+										</metadata>
+										<defs id="defs18" />
+										<sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+											objecttolerance="10" gridtolerance="10" guidetolerance="10"
+											inkscape:pageopacity="0" inkscape:pageshadow="2"
+											inkscape:window-width="1920" inkscape:window-height="1017" id="namedview16"
+											showgrid="false" inkscape:zoom="8.1730769" inkscape:cx="12.203326"
+											inkscape:cy="10.363906" inkscape:window-x="-8" inkscape:window-y="-8"
+											inkscape:window-maximized="1" inkscape:current-layer="svg14" />
+										<g id="g12" transform="translate(-20.032,-19.70425)">
+											<g id="g10">
+												<g id="g4">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2"
+														d="m 40.044,31.827 v 0 L 47.5,26.19 v 0 l -7.625,-5.684 v 0"
+														id="path2" />
+												</g>
+												<g id="g8">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2" d="M 47.5,26.167 H 20.032" id="path6" />
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="card card_v2">
+							<div class="card__bg ibg">
+								<img src="img/photo/card-v2-img-4.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">retail</h5>
+								<span class="link-icon-right">
+									bekijken
+									<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+										xmlns:cc="http://creativecommons.org/ns#"
+										xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+										xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+										xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+										xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="29.133627"
+										height="12.920434" viewBox="0 0 29.133627 12.920434" version="1.1" id="svg14"
+										sodipodi:docname="arrow-right.svg"
+										inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+										<metadata id="metadata20">
+											<rdf:RDF>
+												<cc:Work rdf:about="">
+													<dc:format>image/svg+xml</dc:format>
+													<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+													<dc:title></dc:title>
+												</cc:Work>
+											</rdf:RDF>
+										</metadata>
+										<defs id="defs18" />
+										<sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+											objecttolerance="10" gridtolerance="10" guidetolerance="10"
+											inkscape:pageopacity="0" inkscape:pageshadow="2"
+											inkscape:window-width="1920" inkscape:window-height="1017" id="namedview16"
+											showgrid="false" inkscape:zoom="8.1730769" inkscape:cx="12.203326"
+											inkscape:cy="10.363906" inkscape:window-x="-8" inkscape:window-y="-8"
+											inkscape:window-maximized="1" inkscape:current-layer="svg14" />
+										<g id="g12" transform="translate(-20.032,-19.70425)">
+											<g id="g10">
+												<g id="g4">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2"
+														d="m 40.044,31.827 v 0 L 47.5,26.19 v 0 l -7.625,-5.684 v 0"
+														id="path2" />
+												</g>
+												<g id="g8">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2" d="M 47.5,26.167 H 20.032" id="path6" />
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="card card_v2">
+							<div class="card__bg ibg">
+								<img src="img/photo/card-v2-img-5.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title">Visleveranciers</h5>
+								<span class="link-icon-right">
+									bekijken
+									<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+										xmlns:cc="http://creativecommons.org/ns#"
+										xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+										xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+										xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+										xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="29.133627"
+										height="12.920434" viewBox="0 0 29.133627 12.920434" version="1.1" id="svg14"
+										sodipodi:docname="arrow-right.svg"
+										inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+										<metadata id="metadata20">
+											<rdf:RDF>
+												<cc:Work rdf:about="">
+													<dc:format>image/svg+xml</dc:format>
+													<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+													<dc:title></dc:title>
+												</cc:Work>
+											</rdf:RDF>
+										</metadata>
+										<defs id="defs18" />
+										<sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1"
+											objecttolerance="10" gridtolerance="10" guidetolerance="10"
+											inkscape:pageopacity="0" inkscape:pageshadow="2"
+											inkscape:window-width="1920" inkscape:window-height="1017" id="namedview16"
+											showgrid="false" inkscape:zoom="8.1730769" inkscape:cx="12.203326"
+											inkscape:cy="10.363906" inkscape:window-x="-8" inkscape:window-y="-8"
+											inkscape:window-maximized="1" inkscape:current-layer="svg14" />
+										<g id="g12" transform="translate(-20.032,-19.70425)">
+											<g id="g10">
+												<g id="g4">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2"
+														d="m 40.044,31.827 v 0 L 47.5,26.19 v 0 l -7.625,-5.684 v 0"
+														id="path2" />
+												</g>
+												<g id="g8">
+													<path fill="none" stroke="currentColor" stroke-miterlimit="20"
+														stroke-width="2" d="M 47.5,26.167 H 20.032" id="path6" />
+												</g>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!-- == FOOTER ================== -->
+	<div class="footer bg">
+    <div class="footer__top">
+        <div class="footer__bg ibg">
+            <img src="img/photo/footer-bg.png" alt="">
+        </div>
+        <div class="footer__body">
+            <div class="footer__row-1 row">
+                <div class="col-12 col-md-5">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/logo/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="footer__title title-2">
+                        <strong>
+                            Het allerbeste uit de wereldzeeën
+                        </strong>
+                        Blue World zet de norm
+                    </h2>
+                </div>
+            </div>
+            <div class="footer__row-2 row">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a href="#" class="footer__link-title">
+                        Producten
+                    </a>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#" class="footer__link">
+                                Etiam porta sem malesuada
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                magna mollis euismod 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Morbi leo risus, porta ac
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                consectetur ac, vestibulum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Aenean eu leo quam. 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a href="#" class="footer__link-title">
+                        Oplossingen
+                    </a>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#" class="footer__link">
+                                Integer posuere erat a 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Ante venenatis dapibus
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Posuere velit aliquet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Vivamus sagittis lacus vel 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Augue laoreet rutrum 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Faucibus dolor auctor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Donec sed odio dui.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a href="#" class="footer__link-title">
+                        Branches
+                    </a>
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#" class="footer__link">
+                                Lorem ipsum dolor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                sit amet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Consectetur adipiscing elit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Etiam porta sem 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                malesuada magna 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                mollis euismod
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">
+                                Sed posuere consectetur 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <a href="#" class="footer__link-title">
+                        Branches
+                    </a>
+                    <form>
+                        <div class="usp-block__form-item">
+                          <input type="text" class="form-control" placeholder="Voor- en achternaam">
+                        </div>
+                        <div class="usp-block__form-item">
+                          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Emailadres">
+                        </div>
+                        <button type="submit" class="btn btn-primary link-icon-right">
+                            Inschrijven
+                            <img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+                        </button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copy">
+        <div class="container d-flex align-items-center flex-wrap">
+            <a href="#">
+                Sitemap
+            </a> <span>|</span>
+            <a href="#">
+                Algemene voorwaarden
+            </a> <span>|</span>
+            <a href="#">
+                Disclaimer
+            </a> <span>|</span>
+            <a href="#">
+                Gemaakt door The DISTRIKT 2021
+            </a> 
+        </div>
+    </div>
+</div>
+	<!-- == // FOOTER ================== -->
+
+	
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</body>
+
+</html>

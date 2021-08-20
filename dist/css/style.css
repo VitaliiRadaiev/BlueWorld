@@ -3632,6 +3632,38 @@ input.form-control {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   height: 100%;
+  position: relative;
+}
+
+.card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+}
+
+.card__bg:before {
+  position: absolute;
+  content: "";
+  border-radius: 6px;
+  background-color: #142e4a;
+  opacity: 0.53;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+.card__bg img {
+  border-radius: 6px;
+  -webkit-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  transition: all 1.4s ease;
 }
 
 .card-body {
@@ -3654,6 +3686,8 @@ input.form-control {
   padding-top: 37px;
   padding-bottom: 23px;
   text-align: center;
+  position: relative;
+  z-index: 2;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -3744,6 +3778,39 @@ input.form-control {
 
 .card.card_product .card-title:before {
   display: none;
+}
+
+.card.card_v2 .card-body {
+  min-height: 334px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card.card_v2 .card-title {
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.15em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.card.card_v2 .link-icon-right {
+  color: #fff;
+  margin-top: 0;
+}
+
+.card.card_v2 .link-icon-right svg {
+  color: #17b3d6;
 }
 
 .contact-block {
@@ -4081,6 +4148,130 @@ input.form-control {
 
 .product-details-card__table td:first-child {
   padding-right: 20px;
+}
+
+.intro-text {
+  margin-bottom: 174px;
+}
+
+.nav-card {
+  max-width: 370px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  background-color: #faf6f1;
+  padding: 48px 62px 48px 62px;
+}
+
+.nav-card__list {
+  padding-left: 0;
+}
+
+.nav-card__list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 49px;
+  padding: 4px 0;
+}
+
+.nav-card__list > li:not(:last-child) {
+  border-bottom: 1px solid #deab6b;
+}
+
+.nav-card__item {
+  color: #142e4a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-card__item.active {
+  padding-left: 44px;
+  position: relative;
+}
+
+.nav-card__item.active:before {
+  position: absolute;
+  content: url("../img/icons/arrow-right-yellow.svg");
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
+.branche-slider {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.branche-slider:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 55%;
+  z-index: -1;
+  background-color: #faf6f1;
+}
+
+.branche-slider .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  -webkit-transform: translateY(-90%);
+      -ms-transform: translateY(-90%);
+          transform: translateY(-90%);
+  z-index: -1;
+}
+
+.branche-slider__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.branche-slider__title > strong {
+  font-weight: 600;
+}
+
+.branche-slider .swiper-container {
+  padding: 30px 0 50px;
+  margin-top: -30px;
+}
+
+.branche-slider .swiper-slide {
+  width: 370px;
+  height: auto;
+}
+
+.branche-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+       -o-transition-timing-function: linear !important;
+          transition-timing-function: linear !important;
+}
+
+.branche-slider .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: transparent;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #142e4a;
+  margin: 0 2.5px;
+}
+
+.branche-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #142e4a;
 }
 
 .promo-header {
@@ -5220,6 +5411,12 @@ input.form-control {
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.26);
   }
 
+  .card:hover .card__bg img {
+    -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+
   .slider .swiper-slide .icon-play_circle_filled:hover {
     color: #fff;
     -webkit-transform: translate(-50%, -50%) scale(1.06);
@@ -5236,6 +5433,14 @@ input.form-control {
   .product-details-card__col-1 {
     margin-right: 54px;
     margin-bottom: 0;
+  }
+
+  .intro-text__text {
+    padding-top: 200px;
+  }
+
+  .nav-card__item:hover {
+    color: #deab6b;
   }
 
   .promo-header__scroll:hover {
@@ -5459,7 +5664,7 @@ input.form-control {
   }
 
   .text-image-block__item .col:nth-child(1) {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
 
   .text-image-block__item-images img:nth-child(1) {
@@ -5502,6 +5707,18 @@ input.form-control {
 
   .card-img {
     height: 130px;
+  }
+
+  .card.card_v2 .card-body {
+    min-height: 280px;
+  }
+
+  .card.card_v2 .card-title {
+    font-size: 23px;
+  }
+
+  .branche-slider .swiper-slide {
+    width: 320px;
   }
 
   .promo-header {
@@ -5555,6 +5772,10 @@ input.form-control {
 
   .product-head__body .col-12:last-child {
     margin-bottom: 30px;
+  }
+
+  .branche-overview-page .text-image-block .bubbles {
+    display: none;
   }
 }
 
@@ -5646,7 +5867,7 @@ input.form-control {
   }
 
   .text-image-block__item .col:nth-child(1) {
-    margin-bottom: 80px;
+    margin-bottom: 35px;
   }
 
   .text-image-block__item-images {
@@ -5729,6 +5950,14 @@ input.form-control {
     font-size: 12px;
   }
 
+  .card.card_v2 .card-body {
+    min-height: 260px;
+  }
+
+  .card.card_v2 .card-title {
+    font-size: 21px;
+  }
+
   .contact-block {
     margin-bottom: 80px;
   }
@@ -5792,6 +6021,22 @@ input.form-control {
 
   .product-details-card__table {
     min-width: 360px;
+  }
+
+  .intro-text {
+    margin-bottom: 80px;
+  }
+
+  .nav-card {
+    padding: 20px 20px;
+  }
+
+  .branche-slider__title {
+    margin-bottom: 25px;
+  }
+
+  .branche-slider .swiper-slide {
+    width: 280px;
   }
 
   .promo-header {
