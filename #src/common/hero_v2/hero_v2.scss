@@ -1,0 +1,46 @@
+.hero-v2 {
+    background: $gradient2;
+
+    &__body {
+        min-height: 100vh;
+        padding-bottom: 100px;
+        padding-top: 140px;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: $md3+px) {
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: $md4+px) {
+            padding-top: 100px;
+        }
+    }
+
+    &__text {
+        &.text-content {
+            font-size: 18px;
+
+            & ul {
+                margin-top: 0;
+                margin-bottom: 30px;
+
+                & > li {
+                    padding-left: 0;
+                    &:before {
+                       display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        & img {
+            height: auto;
+            max-height: 284px;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}

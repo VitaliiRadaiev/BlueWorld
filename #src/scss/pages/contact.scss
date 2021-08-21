@@ -1,0 +1,9 @@
+.contact-page {
+    & .text-image-block {
+        @media (max-width: $md2+px) {
+            & .bubbles {
+                display: none;
+            }
+        }
+    }
+}

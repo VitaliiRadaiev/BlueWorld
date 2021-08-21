@@ -41,6 +41,7 @@ window.addEventListener('load', function () {
 	@@include('../common/branche-slider/branche-slider.js');
 	@@include('../common/input-file/input-file.js');
 	@@include('../common/usps-slider/usps-slider.js');
+	@@include('../common/person-slider/person-slider.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -68,3 +69,5 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 });
+
+@@include('../common/map/map.js');

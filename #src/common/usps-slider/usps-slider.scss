@@ -21,11 +21,6 @@
     & .swiper-container {
         padding-bottom: 95px;
         
-
-        @media (min-width: 992px) {
-            overflow: visible;
-        }
-
         @media (max-width: $md3+px) {
             padding-bottom: 50px;
         }

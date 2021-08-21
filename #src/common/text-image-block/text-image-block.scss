@@ -151,10 +151,18 @@
             &:nth-child(1) {
                 @media (max-width: $md2+px) {
                     margin-bottom: 50px;
+
+                    &.mb {
+                        margin-bottom: 150px;
+                    }
                 }
 
                 @media (max-width: $md3+px) {
                     margin-bottom: 35px;
+
+                    &.mb {
+                        margin-bottom: 80px;
+                    }
                 }
             }
         }
