@@ -2939,12 +2939,14 @@ textarea.form-control {
   margin-right: 30px;
 }
 
-.header__logo svg {
+.header__logo svg,
+.header__logo img {
   width: 100%;
   height: auto;
 }
 
-.header__logo svg path {
+.header__logo svg path,
+.header__logo img path {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
