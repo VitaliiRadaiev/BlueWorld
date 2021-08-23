@@ -4470,6 +4470,10 @@ textarea.form-control {
   max-width: 100%;
 }
 
+.hero-v2 .form-control {
+  border-radius: 6px 6px 0 0;
+}
+
 .map {
   height: 417px;
   margin-bottom: 130px;
