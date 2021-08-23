@@ -48,23 +48,29 @@
         line-height: 24px;
         text-transform: uppercase;
         transition: all .3s ease;
+        position: relative;
 
         @media (min-width: 992px) {
             &:hover {
                 color: $mainColor;
+                padding-left: 44px;
+                
+                &:before {
+                    opacity: 1;
+                    transform: translateY(-50%) translateX(0%);
+                }
             }
         }
 
-        &.active {
-            padding-left: 44px;
-            position: relative;
-            &:before {
-                position: absolute;
-                content: url('../img/icons/arrow-right-yellow.svg');
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-            }
+        &:before {
+            position: absolute;
+            content: url('../img/icons/arrow-right-yellow.svg');
+            top: 50%;
+            transform: translateY(-50%) translateX(-100%);
+            left: 0;
+            opacity: 0;
+            transition: all .3s ease;
         }
+
     }
 }

@@ -2,10 +2,6 @@
     let storySlider = document.querySelector('.story-slider');
     if(storySlider) {
         let dataSlider = new Swiper(storySlider.querySelector('.swiper-container'), {
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: true,
-            },
             slidesPerView: 1,
             spaceBetween: 50,
             speed: 800,

@@ -42,6 +42,7 @@ window.addEventListener('load', function () {
 	@@include('../common/input-file/input-file.js');
 	@@include('../common/usps-slider/usps-slider.js');
 	@@include('../common/person-slider/person-slider.js');
+	@@include('../common/form-select/form-select.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {

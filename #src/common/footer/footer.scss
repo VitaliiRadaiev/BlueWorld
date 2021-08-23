@@ -98,11 +98,12 @@
         &:before {
             position: absolute;
             content: '\f054';
-            top: 0;
+            top: 50%;
             left: 0;
             font-family: $fontAwesome;
             font-weight: 900;
             color: $mainColor;
+            transform: translateY(-50%);
             transition: all .3s ease;
         }
 
@@ -112,7 +113,7 @@
                 color: $mainColor;
 
                 &::before {
-                    transform: translateX(4px);
+                    transform: translateY(-50%) translateX(4px);
                 }
             }
         }

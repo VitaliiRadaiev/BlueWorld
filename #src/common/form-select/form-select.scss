@@ -1,0 +1,103 @@
+.form-select {
+	min-height: 51px;
+	border-radius: 5px;
+	background-position: right 9px 19px;
+	color: $textColor;
+	font-family: $mainFontFamily;
+	font-size: 16px;
+	font-weight: 300;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+//<SELECT (sel+tab)>====================================================================================================
+.select {
+	position: relative;
+	&__item {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+
+		background-color: #fff;
+		cursor: pointer;
+        min-height: 51px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        padding-right: 40px;
+        padding-left: 22px;
+        border: 2px solid $mainColor2;
+	}
+	// .select__value
+	&__value {
+        color: $mainColor2;
+        font-family: $mainFontFamily;
+        font-size: 16px;
+        font-weight: 700;
+
+        & > span {
+            font-family: $mainFontFamily;
+        }
+
+		&:before {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+			content: "\f078";
+			font-family: $fontAwesome;
+			transition: all 0.3s ease 0s;
+            font-weight: 900;
+
+		}
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: $textColor;
+		display: none;
+		position: absolute;
+		top: 100%;
+		border-radius: 6px;
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		border-top: 0;
+		border-top: 0;
+		font-size: 14px;
+		line-height: 170%;
+		padding: 10px 0px 5px 0px;
+		color: $textColor;
+		box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
+		max-height: 315px;
+		overflow-y: auto;
+	}
+	// .select__option
+	&__option {
+		cursor: pointer;
+		padding: 5px 22px;
+		margin: 0px 0px 0px 0px;
+		@media (min-width: 992px) {
+			&:hover {
+				background: rgba($mainColor2, 0.3);
+			}
+		}
+	}
+	&._active {
+		z-index: 5;
+		.select__value {
+			&:before {
+				transform: translateY(-50%) scale(1, -1);
+			}
+		}
+		.select__options {
+			display: block;
+		}
+	}
+}
+//</SELECT>====================================================================================================

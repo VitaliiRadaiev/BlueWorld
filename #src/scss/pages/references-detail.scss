@@ -161,7 +161,11 @@
 
     & > li {
         margin: 10px 17.5px;
-
+        padding-left: 0 !important;
+        &::before {
+            display: none;
+        }
+        
         & > a {
             display: flex;
             justify-content: center;

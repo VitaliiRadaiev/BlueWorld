@@ -2620,19 +2620,6 @@ textarea.form-control {
   height: 219px;
 }
 
-.form-select {
-  min-height: 51px;
-  border-radius: 5px;
-  background-position: right 9px 19px;
-  color: #142e4a;
-  font-family: "SofiaPro", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  border: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
 .form-item {
   margin-bottom: 13px;
 }
@@ -2681,6 +2668,13 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.text-content p big {
+  font-size: 1.56em;
+  font-weight: 300;
+  line-height: 1.32em;
+  text-transform: uppercase;
 }
 
 .text-content ul {
@@ -3005,11 +2999,14 @@ textarea.form-control {
 .footer__link:before {
   position: absolute;
   content: "";
-  top: 0;
+  top: 50%;
   left: 0;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #deab6b;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -4276,21 +4273,21 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.nav-card__item.active {
-  padding-left: 44px;
   position: relative;
 }
 
-.nav-card__item.active:before {
+.nav-card__item:before {
   position: absolute;
   content: url("../img/icons/arrow-right-yellow.svg");
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) translateX(-100%);
+      -ms-transform: translateY(-50%) translateX(-100%);
+          transform: translateY(-50%) translateX(-100%);
   left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .branche-slider {
@@ -4538,6 +4535,116 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.form-select {
+  min-height: 51px;
+  border-radius: 5px;
+  background-position: right 9px 19px;
+  color: #142e4a;
+  font-family: "SofiaPro", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.select {
+  position: relative;
+}
+
+.select__item {
+  position: relative;
+}
+
+.select__title {
+  background-color: #fff;
+  cursor: pointer;
+  min-height: 51px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 40px;
+  padding-left: 22px;
+  border: 2px solid #17b3d6;
+}
+
+.select__value {
+  color: #17b3d6;
+  font-family: "SofiaPro", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.select__value > span {
+  font-family: "SofiaPro", sans-serif;
+}
+
+.select__value:before {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-weight: 900;
+}
+
+.select__input {
+  width: 100%;
+  background-color: transparent;
+  height: 100%;
+}
+
+.select__options {
+  color: #142e4a;
+  display: none;
+  position: absolute;
+  top: 100%;
+  border-radius: 6px;
+  min-width: 100%;
+  left: 0;
+  background-color: #fff;
+  border-top: 0;
+  border-top: 0;
+  font-size: 14px;
+  line-height: 170%;
+  padding: 10px 0px 5px 0px;
+  color: #142e4a;
+  -webkit-box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
+          box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
+  max-height: 315px;
+  overflow-y: auto;
+}
+
+.select__option {
+  cursor: pointer;
+  padding: 5px 22px;
+  margin: 0px 0px 0px 0px;
+}
+
+.select._active {
+  z-index: 5;
+}
+
+.select._active .select__value:before {
+  -webkit-transform: translateY(-50%) scale(1, -1);
+      -ms-transform: translateY(-50%) scale(1, -1);
+          transform: translateY(-50%) scale(1, -1);
+}
+
+.select._active .select__options {
+  display: block;
 }
 
 .promo-header {
@@ -5289,6 +5396,11 @@ textarea.form-control {
 
 .social > li {
   margin: 10px 17.5px;
+  padding-left: 0 !important;
+}
+
+.social > li::before {
+  display: none;
 }
 
 .social > li > a {
@@ -5806,9 +5918,9 @@ textarea.form-control {
   }
 
   .footer__link:hover::before {
-    -webkit-transform: translateX(4px);
-        -ms-transform: translateX(4px);
-            transform: translateX(4px);
+    -webkit-transform: translateY(-50%) translateX(4px);
+        -ms-transform: translateY(-50%) translateX(4px);
+            transform: translateY(-50%) translateX(4px);
   }
 
   .footer__copy > .container a:hover {
@@ -5861,6 +5973,14 @@ textarea.form-control {
 
   .nav-card__item:hover {
     color: #deab6b;
+    padding-left: 44px;
+  }
+
+  .nav-card__item:hover:before {
+    opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(0%);
+        -ms-transform: translateY(-50%) translateX(0%);
+            transform: translateY(-50%) translateX(0%);
   }
 
   .input-file__btn:hover {
@@ -5869,6 +5989,10 @@ textarea.form-control {
 
   .person-card__text-wrap a:hover {
     color: #deab6b;
+  }
+
+  .select__option:hover {
+    background: rgba(23, 179, 214, 0.3);
   }
 
   .promo-header__scroll:hover {
@@ -5923,8 +6047,10 @@ textarea.form-control {
 
 @media (min-width: 992px) and (min-width: 992px) {
   .btn.btn-primary:hover {
-    -webkit-box-shadow: 0 0 20px rgba(222, 171, 107, 0.73);
-            box-shadow: 0 0 20px rgba(222, 171, 107, 0.73);
+    -webkit-box-shadow: 0 0 20px rgba(23, 179, 214, 0.73);
+            box-shadow: 0 0 20px rgba(23, 179, 214, 0.73);
+    background-color: #17b3d6;
+    color: #fff;
   }
 }
 
@@ -6243,7 +6369,7 @@ textarea.form-control {
   }
 
   .title-2 {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .title-3 {
@@ -6264,6 +6390,10 @@ textarea.form-control {
 
   .text-content h2 {
     font-size: 19px;
+  }
+
+  .text-content p big {
+    font-size: 1.18em;
   }
 
   .text-content ul > li {
@@ -6729,7 +6859,7 @@ textarea.form-control {
   }
 
   .title-2 {
-    font-size: 32px;
+    font-size: 29px;
   }
 
   .btn {

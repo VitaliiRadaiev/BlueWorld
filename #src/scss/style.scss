@@ -261,11 +261,11 @@ textarea {
 	margin-top: 0;
 
 	@media (max-width: $md3+px) {
-		font-size: 38px;
+		font-size: 32px;
 	}
 
 	@media (max-width: $md4+px) {
-		font-size: 32px;
+		font-size: 29px;
 	}
 
 	& > strong {
@@ -436,7 +436,6 @@ textarea {
 		background-color: $mainColor;
 		color: #fff;
 		text-transform: none;
-
 		border-radius: 6px;
 		letter-spacing: 0;
 
@@ -451,7 +450,9 @@ textarea {
 		@media (min-width: 992px) {
 			@media (min-width: 992px) {
 				&:hover {
-					box-shadow: 0 0 20px rgba($mainColor, 0.73);
+					box-shadow: 0 0 20px rgba($mainColor2, 0.73);
+					background-color: $mainColor2;
+					color: $textColorLight;
 				}
 			}
 		}
@@ -494,17 +495,7 @@ textarea.form-control {
 	height: 219px;
 }
 
-.form-select {
-	min-height: 51px;
-	border-radius: 5px;
-	background-position: right 9px 19px;
-	color: $textColor;
-	font-family: $mainFontFamily;
-	font-size: 16px;
-	font-weight: 300;
-	border: none !important;
-	box-shadow: none !important;
-}
+
 .form-item {
 	margin-bottom: 13px;
 }
@@ -569,6 +560,17 @@ textarea.form-control {
 				&:hover {
 					color: $mainColor;
 				}
+			}
+		}
+
+		& big {
+			font-size: 1.56em;
+			font-weight: 300;
+			line-height: 1.32em;
+			text-transform: uppercase;
+
+			@media (max-width: $md3+px) {
+				font-size: 1.18em;
 			}
 		}
 	}
@@ -687,6 +689,7 @@ textarea.form-control {
 @import "../common/hero_v2/hero_v2";
 @import "../common/map/map";
 @import "../common/person-slider/person-slider";
+@import "../common/form-select/form-select";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
