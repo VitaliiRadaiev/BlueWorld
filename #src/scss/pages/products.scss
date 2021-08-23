@@ -1,8 +1,44 @@
 .products {
     margin-bottom: 95px;
     text-align: center;
+    position: relative;
     @media (max-width: $md3+px) {
         margin-bottom: 80px;
+    }
+
+    & .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 250px;
+        transform: translate(-50%, -70%);
+
+        &.bubbles-2 {
+            top: auto;
+            right: 0;
+            left: auto;
+            width: 350px;
+            bottom: 0;
+            transform: translate(10%, -50%);
+        }
+    }
+
+    &.products_bg {
+        margin-bottom: -1px !important;
+        padding-bottom: 95px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 64%;
+            background-color: #faf6f1;
+            z-index: -1;
+        }
     }
 
     &__list {

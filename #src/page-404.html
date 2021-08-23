@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	@@include('common/header/_header.html',{
+	"bg-white": "bg-white",
+	})
+	<!-- == // TOP LINE ================== -->
+
+
+	<main class="_page info-page">
+		<section class="info-block">
+			<div class="info-block__bg ibg">
+				<img src="img/photo/info-page-img-1.jpg" alt="">
+			</div>
+			<div class="info-block__body d-flex flex-column justify-content-center align-items-center _padding-top">
+				<div class="info-block__text-wrap container-sm text-center text-white">
+					<h1 class="info-block__title"><strong>404</strong></h1>
+					<h2 class="info-block__subtitle title-2">
+						Onze excuses.
+						Deze pagina bestaat Niet (meeR)
+					</h2>
+					<div class="info-block__text text-content">
+						Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+					</div>
+					<a href="#" class="btn btn-primary letter-spacing-1 text-uppercase">Terug naar home</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('_js.html',{})
+</body>
+
+</html>

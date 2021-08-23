@@ -169,7 +169,6 @@ textarea {
 
 ._page {
 	flex: 1 1 auto;
-	padding: 1px 0;
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
@@ -511,6 +510,25 @@ textarea.form-control {
 .link {
 }
 
+.letter-spacing-0 {
+	letter-spacing: 0;
+}
+.letter-spacing-1 {
+	letter-spacing: 1rem * .13 !important;
+}
+.letter-spacing-2 {
+	letter-spacing: 1rem * .25 !important;
+}
+.letter-spacing-3 {
+	letter-spacing: 1rem * .5 !important;
+}
+.letter-spacing-4 {
+	letter-spacing: 1rem * .825 !important;
+}
+.letter-spacing-5 {
+	letter-spacing: 1rem * 1 !important;
+}
+
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 16px;
@@ -603,6 +621,17 @@ textarea.form-control {
 	}
 
 	& figure {
+		margin-top: 50px;
+		margin-bottom: 20px;
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	& figcaption {
+		font-style: italic;
+		color: #4b6a8b;
 	}
 
 	& q {
@@ -701,4 +730,7 @@ textarea.form-control {
 @import "pages/about";
 @import "pages/working";
 @import "pages/contact";
+@import "pages/landing";
+@import "pages/branche-detail";
+@import "pages/info";
 // ==== AND PAGES =====================================================

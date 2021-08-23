@@ -1,20 +1,4 @@
 .product-detail-page {
-    & .products {
-        margin-bottom: 0 !important;
-        padding-bottom: 95px;
-        position: relative;
-
-        &:before {
-            position: absolute;
-            content: '';
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 64%;
-            background-color: #faf6f1;
-            z-index: -1;
-        }
-    }
 
     & .img-full-width {
         position: relative;
@@ -185,7 +169,7 @@
     &:before {
         position: absolute;
         content: '';
-        top: 0;
+        top: -1px;
         left: 0;
         width: 100%;
         height: 64%;
@@ -203,5 +187,10 @@
         @media (max-width: $md3+px) {
             margin-bottom: 80px;
         }
+    }
+
+    &__text {
+        max-width: 640px;
+        margin: 0 auto 82px;
     }
 }
