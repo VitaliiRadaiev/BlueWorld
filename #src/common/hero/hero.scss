@@ -13,6 +13,14 @@
         z-index: 2;
     }
 
+    &.mb-height {
+        & .hero__body {
+            @media (max-width: $md3+px) {
+                min-height: 250px;
+            }
+        }
+    }
+
     &.hero_mb {
         margin-bottom: -95px;
 

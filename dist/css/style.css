@@ -4531,6 +4531,13 @@ textarea.form-control {
   display: none;
 }
 
+.hero-v2__text.text-content ul > li a {
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .hero-v2__img img {
   height: auto;
   max-height: 284px;
@@ -6238,6 +6245,10 @@ textarea.form-control {
     background-color: #17b3d6;
   }
 
+  .hero-v2__text.text-content ul > li a:hover {
+    color: #deab6b;
+  }
+
   .person-card__text-wrap a:hover {
     color: #deab6b;
   }
@@ -6549,6 +6560,17 @@ textarea.form-control {
     margin-bottom: 150px;
   }
 
+  .story-block__bg:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
   .story-block__body {
     min-height: 700px;
   }
@@ -6758,6 +6780,10 @@ textarea.form-control {
 
   .hero {
     margin-bottom: 80px;
+  }
+
+  .hero.mb-height .hero__body {
+    min-height: 250px;
   }
 
   .hero.hero_mb {

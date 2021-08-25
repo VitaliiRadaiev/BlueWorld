@@ -38,6 +38,17 @@
                     &:before {
                        display: none;
                     }
+
+                    & a {
+                        color: #fff;
+                        transition: all .3s ease;
+
+                        @media (min-width: 992px) {
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
                 }
             }
         }

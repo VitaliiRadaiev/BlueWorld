@@ -1450,5 +1450,3 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 };
-
-
