@@ -155,8 +155,7 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
 		let allTabs = container.querySelectorAll(`${tabsName}`);
 
 		if (!allTabs.length) {
-			let err = new Error('Tabs not found.');
-			throw err;
+			return
 		}
 
 		if (allTriggers.length) {

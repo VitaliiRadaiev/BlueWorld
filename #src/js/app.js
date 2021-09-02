@@ -48,6 +48,22 @@ window.addEventListener('load', function () {
 
 
 	createTabs('.references', '.references__nav-item', '.references__list');
+
+	let references = document.querySelector('.references');
+	if(references) {
+		let select = references.querySelector('.form-select.filter');
+		let allTabs = references.querySelectorAll('.references__list');
+
+		select.addEventListener('change', () => {
+			allTabs.forEach(tab => {
+				if (tab.id == select.value) {
+					tab.classList.add('active')
+				} else {
+					tab.classList.remove('active');
+				}
+			})
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function() {

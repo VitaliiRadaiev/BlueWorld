@@ -473,8 +473,7 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
 		let allTabs = container.querySelectorAll(`${tabsName}`);
 
 		if (!allTabs.length) {
-			let err = new Error('Tabs not found.');
-			throw err;
+			return
 		}
 
 		if (allTriggers.length) {
@@ -1233,6 +1232,22 @@ function selects_update_all() {
 
 
 	createTabs('.references', '.references__nav-item', '.references__list');
+
+	let references = document.querySelector('.references');
+	if(references) {
+		let select = references.querySelector('.form-select.filter');
+		let allTabs = references.querySelectorAll('.references__list');
+
+		select.addEventListener('change', () => {
+			allTabs.forEach(tab => {
+				if (tab.id == select.value) {
+					tab.classList.add('active')
+				} else {
+					tab.classList.remove('active');
+				}
+			})
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function() {
