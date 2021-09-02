@@ -163,6 +163,10 @@ textarea {
 	appearance: none;
 }
 
+[hidden] {
+	display: none !important;
+}
+
 .center {
 	text-align: center;
 }

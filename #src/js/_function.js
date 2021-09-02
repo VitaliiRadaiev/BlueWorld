@@ -184,11 +184,7 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
 
 				})
 			})
-		} else {
-			let err = new Error('Triggers not found.');
-			throw err;
-		}
-
+		} 
 	}
 }
 

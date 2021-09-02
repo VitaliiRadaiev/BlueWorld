@@ -1,5 +1,16 @@
+.products-page {
+    & .hero.hero_mb {
+        margin-bottom: 0;
+    }
+
+    & .products__list {
+        margin-top: -95px;
+    }
+}
+
+
 .products {
-    margin-bottom: 95px;
+    padding-bottom: 95px;
     text-align: center;
     position: relative;
     @media (max-width: $md3+px) {
@@ -47,6 +58,26 @@
                 flex: 0 1 100%;
             }
         }
+
+        & ._load-category {
+            &.row {
+                padding-right: 0;
+                padding-left: 0;
+                width: auto;
+                margin-left: 0;
+                margin-right: 0;
+
+                &.gy-4 {
+                    margin-top: 0;
+                }
+            }
+
+            @media (max-width: 374.98px) {
+                & .col-6 {
+                    flex: 0 1 100%;
+                }
+            }
+        }
     }
 
     &__bottom {
@@ -86,3 +117,4 @@
         margin-top: 82px;
     }
 }
+

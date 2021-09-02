@@ -43,6 +43,11 @@ window.addEventListener('load', function () {
 	@@include('../common/usps-slider/usps-slider.js');
 	@@include('../common/person-slider/person-slider.js');
 	@@include('../common/form-select/form-select.js');
+	@@include('../common/products/products.js');
+
+
+
+	createTabs('.references', '.references__nav-item', '.references__list');
 });
 
 window.addEventListener('DOMContentLoaded', function() {

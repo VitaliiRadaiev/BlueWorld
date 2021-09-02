@@ -65,7 +65,11 @@
     }
 
     &__list {
+        display: none;
 
+        &.active {
+            display: block;
+        }
     }
 
     &__list-item {
