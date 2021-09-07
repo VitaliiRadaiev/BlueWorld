@@ -4135,12 +4135,15 @@ textarea.form-control {
   margin-bottom: 30px;
 }
 
-.slider .swiper-container {
-  margin-bottom: 23px;
+.slider-wrap {
+  max-width: 970px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-.slider .swiper-slide {
+.slider .swiper-slide > .ibg {
   height: 542px;
+  margin-bottom: 10px;
 }
 
 .slider .swiper-slide .icon-play_circle_filled {
@@ -4156,6 +4159,11 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.slider .swiper-pagination {
+  bottom: auto;
+  top: calc(100% - 63px);
 }
 
 .slider .swiper-pagination .swiper-pagination-bullet {
@@ -4177,6 +4185,10 @@ textarea.form-control {
   font-style: italic;
   letter-spacing: normal;
   line-height: 26px;
+}
+
+.z-index-5 {
+  z-index: 5;
 }
 
 .product-details-card {
@@ -6941,7 +6953,7 @@ textarea.form-control {
     padding: 40px 20px;
   }
 
-  .slider .swiper-slide {
+  .slider .swiper-slide > .ibg {
     height: 400px;
   }
 
@@ -7212,7 +7224,7 @@ textarea.form-control {
     min-height: 320px;
   }
 
-  .slider .swiper-slide {
+  .slider .swiper-slide > .ibg {
     height: 300px;
   }
 

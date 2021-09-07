@@ -1,16 +1,22 @@
+.slider-wrap {
+    max-width: 970px;
+    margin: 0 auto;
+    background-color: #fff;
+}
 .slider {
-    & .swiper-container {
-        margin-bottom: 23px;
-    }
     & .swiper-slide {
-        height: 542px;
 
-        @media (max-width: $md3+px) {
-            height: 400px;
+        & > .ibg {
+            height: 542px;
+            margin-bottom: 10px;
+            @media (max-width: $md3+px) {
+                height: 400px;
+            }
+            @media (max-width: $md4+px) {
+                height: 300px;
+            }
         }
-        @media (max-width: $md4+px) {
-            height: 300px;
-        }
+
 
         & .icon-play_circle_filled {
             position: absolute;
@@ -32,7 +38,8 @@
     }
 
     & .swiper-pagination {
-        //bottom: 110px;
+        bottom: auto;
+        top: calc(100% - 63px);
 
         & .swiper-pagination-bullet {
             width: 14px;
@@ -55,4 +62,8 @@
         letter-spacing: normal;
         line-height: 26px;
     }
+}
+
+.z-index-5 {
+    z-index: 5;
 }
