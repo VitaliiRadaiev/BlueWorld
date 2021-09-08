@@ -21,6 +21,16 @@
         }
     }
 
+    &.shadow-down {
+        margin-top: -3px;
+        
+        & .article__body {
+            padding-top: 0;
+            border-radius: 0 0 3px 3px;
+            box-shadow: 0 30px 30px rgb(0 0 0 / 16%);
+        }
+    }
+
     &__body {
         max-width: 970px;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);

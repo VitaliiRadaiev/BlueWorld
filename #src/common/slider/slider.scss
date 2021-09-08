@@ -1,11 +1,16 @@
 .slider-wrap {
-    max-width: 970px;
+    max-width: 1050px;
     margin: 0 auto;
-    background-color: #fff;
-}
-.slider {
-    & .swiper-slide {
+    padding: 0 40px;
 
+    @media (max-width: 374.98px) {
+        padding: 0 20px;
+    }
+}
+
+.slider {
+    background-color: #fff;
+    & .swiper-slide {
         & > .ibg {
             height: 542px;
             margin-bottom: 10px;
@@ -17,7 +22,6 @@
             }
         }
 
-
         & .icon-play_circle_filled {
             position: absolute;
             top: 50%;
@@ -26,7 +30,7 @@
             transform: translate(-50%, -50%);
             color: rgba(#fff, 0.7);
             font-size: 100px;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
 
             @media (min-width: 992px) {
                 &:hover {
@@ -66,4 +70,7 @@
 
 .z-index-5 {
     z-index: 5;
+}
+.z-index-4 {
+    z-index: 4;
 }
