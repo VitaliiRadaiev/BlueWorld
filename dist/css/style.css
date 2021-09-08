@@ -5518,6 +5518,7 @@ textarea.form-control {
 
 .article {
   padding: 0 40px;
+  margin-bottom: 50px;
 }
 
 .article + .contact-block .container-sm {
@@ -5552,7 +5553,6 @@ textarea.form-control {
   border-radius: 3px;
   background-color: #ffffff;
   padding-top: 104px;
-  padding-bottom: 48px;
 }
 
 .article__body.text-content h2 {
@@ -5567,6 +5567,10 @@ textarea.form-control {
 .article__body.text-content .slider {
   margin-top: 90px;
   margin-bottom: 61px;
+}
+
+.article__body .contact-block {
+  margin: 0 -40px;
 }
 
 .article__container {
@@ -7135,7 +7139,6 @@ textarea.form-control {
 
   .article__body {
     padding-top: 50px;
-    padding-bottom: 30px;
   }
 
   .article__body.text-content .slider {

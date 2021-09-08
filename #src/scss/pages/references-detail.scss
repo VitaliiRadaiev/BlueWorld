@@ -1,6 +1,6 @@
 .article {
     padding: 0 40px;
-
+    margin-bottom: 50px;
     @media (max-width: 374.98px) {
         padding: 0 20px;
     }
@@ -37,11 +37,9 @@
         border-radius: 3px;
         background-color: #ffffff;
         padding-top: 104px;
-        padding-bottom: 48px;
 
         @media (max-width: $md3+px) {
             padding-top: 50px;
-            padding-bottom: 30px;
         }
 
         &.text-content {
@@ -63,6 +61,10 @@
                     margin-bottom: 40px;
                 }
             }
+        }
+
+        & .contact-block {
+            margin: 0 -40px;
         }
     }
 
